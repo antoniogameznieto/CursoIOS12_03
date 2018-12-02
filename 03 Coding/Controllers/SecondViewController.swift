@@ -37,10 +37,6 @@ class SecondViewController: UIViewController {
             // Lo mostramos por la consola
             print(fibonacci[i])
         }
-        
-        
-        
-        
     }
 
 }

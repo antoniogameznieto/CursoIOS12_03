@@ -97,26 +97,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" text="Second View" textAlignment="center" lineBreakMode="tailTruncation" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="zEq-FU-wV5">
-                                <rect key="frame" x="87" y="312" width="201.5" height="43"/>
-                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="36"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" minimumScaleFactor="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="1pC-kV-oZW">
+                                <rect key="frame" x="20" y="52" width="335" height="66"/>
+                                <string key="text">Selecciona cuántos números 
+de Fibonacci quieres ver</string>
+                                <fontDescription key="fontDescription" name="AvenirNext-Medium" family="Avenir Next" pointSize="24"/>
+                                <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loaded by SecondViewController" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NDk-cv-Gan">
-                                <rect key="frame" x="80" y="363" width="215" height="17"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="5vO-0Q-OaO">
+                                <rect key="frame" x="20" y="210" width="335" height="378"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="bQU-67-fAz">
+                                <rect key="frame" x="20" y="150" width="335" height="40"/>
+                                <subviews>
+                                    <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="100" translatesAutoresizingMaskIntoConstraints="NO" id="j3J-og-J3o">
+                                        <rect key="frame" x="0.0" y="0.0" width="94" height="29"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="vua-g2-GZh"/>
+                                        </constraints>
+                                    </stepper>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Va-2b-TqS">
+                                        <rect key="frame" x="102" y="0.0" width="233" height="33"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="33" id="kB4-OP-ZjX"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="24"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="2GZ-h5-MX9"/>
+                                </constraints>
+                            </stackView>
                         </subviews>
-                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="top" secondItem="zEq-FU-wV5" secondAttribute="bottom" constant="8" symbolic="YES" id="Day-4N-Vmt"/>
-                            <constraint firstItem="NDk-cv-Gan" firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="JgO-Fn-dHn"/>
-                            <constraint firstAttribute="centerX" secondItem="zEq-FU-wV5" secondAttribute="centerX" id="qqM-NS-xev"/>
-                            <constraint firstAttribute="centerY" secondItem="zEq-FU-wV5" secondAttribute="centerY" id="qzY-Ky-pLD"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="bQU-67-fAz" secondAttribute="trailing" constant="20" id="7iK-7q-WR3"/>
+                            <constraint firstItem="bQU-67-fAz" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="IYl-nd-tU9"/>
+                            <constraint firstItem="5vO-0Q-OaO" firstAttribute="top" secondItem="bQU-67-fAz" secondAttribute="bottom" constant="20" id="OYy-4b-YCK"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="5vO-0Q-OaO" secondAttribute="trailing" constant="20" id="Omr-ip-Hz2"/>
+                            <constraint firstItem="1pC-kV-oZW" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="OsA-U8-UMH"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="trailing" secondItem="1pC-kV-oZW" secondAttribute="trailing" constant="20" id="Vmz-HP-IKj"/>
+                            <constraint firstItem="1pC-kV-oZW" firstAttribute="top" secondItem="O1u-W8-tvY" secondAttribute="top" constant="32" id="XMH-G4-4pI"/>
+                            <constraint firstItem="1pC-kV-oZW" firstAttribute="centerX" secondItem="QS5-Rx-YEW" secondAttribute="centerX" id="at5-ar-m1y"/>
+                            <constraint firstItem="O1u-W8-tvY" firstAttribute="bottom" secondItem="5vO-0Q-OaO" secondAttribute="bottom" constant="30" id="m92-EZ-ZVf"/>
+                            <constraint firstItem="bQU-67-fAz" firstAttribute="top" secondItem="1pC-kV-oZW" secondAttribute="bottom" constant="32" id="se4-T3-ba3"/>
+                            <constraint firstItem="5vO-0Q-OaO" firstAttribute="leading" secondItem="O1u-W8-tvY" secondAttribute="leading" constant="20" id="ygm-AV-dI2"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="O1u-W8-tvY"/>
                     </view>
@@ -124,7 +156,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4Nw-L8-lE0" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="750" y="0.0"/>
+            <point key="canvasLocation" x="749.60000000000002" y="-0.44977511244377816"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="yl2-sM-qoP">
