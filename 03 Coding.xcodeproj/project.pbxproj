@@ -13,6 +13,7 @@
 		84605E8F21B3C6B10012D257 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84605E8D21B3C6B10012D257 /* Main.storyboard */; };
 		84605E9121B3C6B20012D257 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84605E9021B3C6B20012D257 /* Assets.xcassets */; };
 		84605E9421B3C6B20012D257 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84605E9221B3C6B20012D257 /* LaunchScreen.storyboard */; };
+		84605E9C21B3C9A00012D257 /* ThirdViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84605E9B21B3C9A00012D257 /* ThirdViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		84605E9021B3C6B20012D257 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84605E9321B3C6B20012D257 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84605E9521B3C6B20012D257 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		84605E9B21B3C9A00012D257 /* ThirdViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ThirdViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,15 +58,32 @@
 		84605E8621B3C6B10012D257 /* 03 Coding */ = {
 			isa = PBXGroup;
 			children = (
+				84605E9E21B3C9C60012D257 /* StoryBoards */,
 				84605E8721B3C6B10012D257 /* AppDelegate.swift */,
-				84605E8921B3C6B10012D257 /* FirstViewController.swift */,
-				84605E8B21B3C6B10012D257 /* SecondViewController.swift */,
-				84605E8D21B3C6B10012D257 /* Main.storyboard */,
+				84605E9D21B3C9B20012D257 /* Controllers */,
 				84605E9021B3C6B20012D257 /* Assets.xcassets */,
-				84605E9221B3C6B20012D257 /* LaunchScreen.storyboard */,
 				84605E9521B3C6B20012D257 /* Info.plist */,
 			);
 			path = "03 Coding";
+			sourceTree = "<group>";
+		};
+		84605E9D21B3C9B20012D257 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				84605E8921B3C6B10012D257 /* FirstViewController.swift */,
+				84605E8B21B3C6B10012D257 /* SecondViewController.swift */,
+				84605E9B21B3C9A00012D257 /* ThirdViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		84605E9E21B3C9C60012D257 /* StoryBoards */ = {
+			isa = PBXGroup;
+			children = (
+				84605E9221B3C6B20012D257 /* LaunchScreen.storyboard */,
+				84605E8D21B3C6B10012D257 /* Main.storyboard */,
+			);
+			path = StoryBoards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -140,6 +159,7 @@
 			files = (
 				84605E8C21B3C6B10012D257 /* SecondViewController.swift in Sources */,
 				84605E8821B3C6B10012D257 /* AppDelegate.swift in Sources */,
+				84605E9C21B3C9A00012D257 /* ThirdViewController.swift in Sources */,
 				84605E8A21B3C6B10012D257 /* FirstViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
