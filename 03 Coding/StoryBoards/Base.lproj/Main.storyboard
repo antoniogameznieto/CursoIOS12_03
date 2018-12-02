@@ -53,6 +53,14 @@
                                     </label>
                                 </subviews>
                             </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8uc-VV-ADq">
+                                <rect key="frame" x="20" y="189" width="335" height="36"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="17"/>
+                                <state key="normal" title="Validar tus datos"/>
+                                <connections>
+                                    <action selector="buttonValidar:" destination="9pv-A4-QxB" eventType="touchUpInside" id="aFn-s8-Xmp"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                         <constraints>
@@ -63,7 +71,10 @@
                             <constraint firstItem="g2p-vb-NHw" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="D1u-Nc-ry6"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="g2p-vb-NHw" secondAttribute="trailing" constant="20" id="GIr-JD-gCo"/>
                             <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="qUY-rX-54I" secondAttribute="trailing" constant="20" id="JSt-K5-AVt"/>
+                            <constraint firstItem="8uc-VV-ADq" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="ShY-Ju-Lkj"/>
+                            <constraint firstItem="PQr-Ze-W5v" firstAttribute="trailing" secondItem="8uc-VV-ADq" secondAttribute="trailing" constant="20" id="WR3-4x-NR4"/>
                             <constraint firstItem="g2p-vb-NHw" firstAttribute="top" secondItem="qUY-rX-54I" secondAttribute="bottom" constant="8" id="lgn-GG-cTr"/>
+                            <constraint firstItem="8uc-VV-ADq" firstAttribute="top" secondItem="GS4-Jh-n0d" secondAttribute="bottom" constant="30" id="mUt-DU-DgS"/>
                             <constraint firstItem="qUY-rX-54I" firstAttribute="leading" secondItem="PQr-Ze-W5v" secondAttribute="leading" constant="20" id="oGc-uA-TEW"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="PQr-Ze-W5v"/>
