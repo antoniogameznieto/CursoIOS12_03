@@ -11,17 +11,15 @@ import UIKit
 // El UITableViewDelegate es para delegar acciones
 // El UITableViewDataSource proporciona la fuente de datos
 class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
-
-    
     
     // MARK: Definimos nuestras variables globales
     var families : [String] = []              // Definimos array tipo string para las familias
     var fonts : [String: [String]] = [:]     // Definimos array tipo string para las fuentes
     
-    // Definimos los IBOutlets
+    // MARK: Definimos los IBOutlets
     @IBOutlet weak var tableView: UITableView!
     
-    // Método viewDidLoad
+    // MARK: Método viewDidLoad
     override func viewDidLoad() {
         super.viewDidLoad()
         // Asignamos las familias disponibles al array families
