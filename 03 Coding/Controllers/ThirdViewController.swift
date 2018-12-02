@@ -26,6 +26,8 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         super.viewDidLoad()
         // Asignamos las familias disponibles al array families
         families = UIFont.familyNames
+        // Ordena y devuelve un string
+        families = UIFont.familyNames.sorted(by: { return $1 > $0 })
         // For que asigna la fuente a la familia que estemos viendo
         for fam in families{
             fonts[fam] = UIFont.fontNames(forFamilyName: fam)
@@ -36,20 +38,25 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
     
     // MARK: Métodos del protocolo UITableViewDataSource
     
-    // Este sirve para saber las secciones que tiene las tablas. De momento sólo hay una sección
+    // Le dice a la tabla: "Prepara una sección sólo"
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
     }
     
-    // Este sirve para decidir cuantas filas vamos a tener por sección. Serán tantas filas como familias de fuentes habrá
+    // Nos dice cuantas filas tiene la sección. Son las familias de fuentes
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return self.families.count
     }
     
     // El sistema reutiliza las celdas. A cada celda se le da un identificador
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Variable para la asignación de la celda que le corresponda
         let cell = tableView.dequeueReusableCell(withIdentifier: "fontFamilyCell", for: indexPath)
-        cell.textLabel?.text = families[indexPath.row]
+        // Asignamos la fuente que corresponda a su variable
+        let fontFamily = families[indexPath.row]
+        // Cambiamos el texto de la celda por el que le corresponda
+        cell.textLabel?.text = fontFamily
+        cell.textLabel?.font = UIFont(name: fontFamily, size: 20.0)
         return cell
     }
     
