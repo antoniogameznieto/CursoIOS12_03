@@ -9,22 +9,21 @@
 import UIKit
 
 class ThirdViewController: UIViewController {
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
-    }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // Definimos nuestras variables globales
+    var families : [String] = []
+    var fonts : [String: [String]] = [:]
+    
+    override func viewDidLoad() {
+        
+        super.viewDidLoad()
+        // Asignamos las familias disponibles al array families
+        families = UIFont.familyNames
+        // For que asigna la fuente a la familia que estemos viendo
+        for fam in families{
+            fonts[fam] = UIFont.fontNames(forFamilyName: fam)
+        }
+        print(fonts)
     }
-    */
 
 }
