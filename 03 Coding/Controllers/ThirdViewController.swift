@@ -14,7 +14,7 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
 
     
     
-    // Definimos nuestras variables globales
+    // MARK: Definimos nuestras variables globales
     var families : [String] = []              // Definimos array tipo string para las familias
     var fonts : [String: [String]] = [:]     // Definimos array tipo string para las fuentes
     
@@ -60,5 +60,12 @@ class ThirdViewController: UIViewController, UITableViewDelegate, UITableViewDat
         return cell
     }
     
-    
+    // MARK: Métodos del protocolo UITableViewDelegate
+    // Cuando pulsamos en la fila correspondiente a la familia que seleccionamos
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let row = indexPath.row // Sería la fila pulsada
+        let fontFamily = families[row] // la familia que esté recuperada
+        let familyFonts = fonts[fontFamily]!
+        print(familyFonts)
+    }
 }
