@@ -21,18 +21,10 @@ class SecondViewController: UIViewController {
     @IBOutlet weak var textViewResult: UITextView!
     @IBOutlet weak var etiquetaNumeroOro: UILabel!
     
-    // Método de carga del SecondViewController
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Al arrancar el viewController debemos actualizar la etiqueta y generar los números aleatorios
-        actualizarEtiqueta(id: Int(self.stepper.value))
-    }
-
     // Función propia que genera los números Fibonacci y los mete en el array hasta el máximo definido en la variable anterior
     func generateFibNumbers() {
         // Aqui generaremos los números hasta el identificador
         fibonacci = [0,1]
-        
         for i in 2...fibId { // desde el 2 hasta el fibId (Incluyendo los dos)
             // Calculamos el número nuevo y lo añadimos al array (colección)
             fibonacci.append(fibonacci[i-1]+fibonacci[i-2])
@@ -70,7 +62,14 @@ class SecondViewController: UIViewController {
         }
     }
     
-    // Métodos y acciones
+    // Método de carga del SecondViewController
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Al arrancar el viewController debemos actualizar la etiqueta y generar los números aleatorios
+        actualizarEtiqueta(id: Int(self.stepper.value))
+    }
+    
+    // Métodos y acciones propias
     // Acción cuando cambia el valor del stepper
     @IBAction func stepperPulsado(_ sender: UIStepper) {
         // Actualizamos las etiquetas
