@@ -13,11 +13,13 @@ class SecondViewController: UIViewController {
     // Definimos las variables
     var fibonacci : [Int] = [0,1]   // Array que contenga la serie de Fibonacci
     var fibId = 1                    // Máximo de elementos de la serie que quiera obtener
+    var calculoNumeroOro = false
     
     // Definimos los IBOutlets
     @IBOutlet weak var etiquetaNumero: UILabel!
     @IBOutlet weak var stepper: UIStepper!
     @IBOutlet weak var textViewResult: UITextView!
+    @IBOutlet weak var etiquetaNumeroOro: UILabel!
     
     // Método de carga del SecondViewController
     override func viewDidLoad() {
@@ -30,7 +32,7 @@ class SecondViewController: UIViewController {
     func generateFibNumbers() {
         // Aqui generaremos los números hasta el identificador
         fibonacci = [0,1]
-        //fibonacci = [0]
+        
         for i in 2...fibId { // desde el 2 hasta el fibId (Incluyendo los dos)
             // Calculamos el número nuevo y lo añadimos al array (colección)
             fibonacci.append(fibonacci[i-1]+fibonacci[i-2])
@@ -50,6 +52,22 @@ class SecondViewController: UIViewController {
         self.etiquetaNumero.text = "\(self.fibId)"
         // Llamamos a la generación de números
         generateFibNumbers()
+        calcularNumeroOro()
+    }
+    
+    // Función que calcula el número de oro
+    func calcularNumeroOro() {
+        if(calculoNumeroOro){
+            // Generamos el número de Oro como cociente entre los dos últimos fibonacci
+            let ultimo = Double(fibonacci[fibonacci.count-1])
+            let anterior = Double(fibonacci[fibonacci.count-2])
+            let numeroOro = ultimo / anterior
+            self.etiquetaNumeroOro.text = String(numeroOro)
+        }
+        else{
+            // Ponemos un texto por defecto en la etiqueta
+            self.etiquetaNumeroOro.text = "Ver número de oro"
+        }
     }
     
     // Métodos y acciones
@@ -59,7 +77,10 @@ class SecondViewController: UIViewController {
         actualizarEtiqueta(id: Int(sender.value))
     }
     
-    
+    // Acción cuando cambie el valor del switch
+    @IBAction func switchCambiado(_ sender: UISwitch) {
+        calculoNumeroOro = sender.isOn
+        calcularNumeroOro()
+    }
     
 }
-
